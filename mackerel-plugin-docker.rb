@@ -54,7 +54,7 @@ class DockerPlugin
     dat = {}
     names.each {|k,v|
       metrics.each { |metric, stat|
-        content = File.open("#{prefix_path}/#{metric}/docker/#{k}/#{metric}.stat").read
+        content = File.open("#{prefix_path}/#{metric}/system.slice/docker-#{k}.scope/#{metric}.stat").read
         stat.each { |s|
           content =~ /#{s} (\d+)/
           # dat["docker.#{metric}."+labels[k]+"_"+names[k]+"_#{s}"] = $1.to_i
