@@ -2,7 +2,8 @@ FROM debian:jessie
 
 # setup mackerel-agent
 RUN apt-get update \
-  && apt-get -y install curl sudo ruby docker.io \
+  && apt-get -y install curl sudo ruby \
+  && curl -sSL https://get.docker.com/ | sh \
   && curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sh \
   && apt-get update \
   && apt-get -y install mackerel-agent mackerel-agent-plugins \
