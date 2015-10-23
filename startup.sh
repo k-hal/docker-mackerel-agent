@@ -10,4 +10,4 @@ if [[ $include ]]; then
 fi
 
 echo /usr/local/bin/mackerel-agent -apikey=${apikey} -v
-exec /usr/local/bin/mackerel-agent -v
+exec /usr/local/bin/mackerel-agent 
